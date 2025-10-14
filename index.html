@@ -2,63 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Huffle’s IT Services – Client Intake</title>
+  <title>Huffle IT Services – Client Intake</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f0;
+      color: #3b2f2f;
       padding: 20px;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h2 {
+    h1 {
+      color: #a65c2e;
       text-align: center;
-      color: #333;
     }
-    input, textarea, button {
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
       width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border-radius: 5px;
+      padding: 10px;
+      margin-top: 5px;
       border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
     button {
-      background-color: #333;
-      color: #fff;
+      margin-top: 20px;
+      background-color: #a65c2e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #8c4a24;
     }
   </style>
 </head>
 <body>
-  <h2>🛠️ Huffle’s IT Services – Client Intake</h2>
-  <form action="https://formsubmit.co/hufflesitservices@gmail.com" method="POST" onsubmit="showThankYou()>
-    <input type="text" name="Name" placeholder="Full Name" required>
-    <input type="text" name="Pronouns" placeholder="Preferred Pronouns">
-    <input type="text" name="Contact" placeholder="Email or Phone" required>
-    <input type="text" name="Device" placeholder="Device Type">
-    <input type="text" name="OS" placeholder="Operating System">
-    <textarea name="Issue" placeholder="Describe the issue..." required></textarea>
-    <input type="text" name="Privacy" placeholder="Privacy Preferences">
-    <label>
-      <input type="checkbox" name="Consent" required>
-      I agree to be contacted and understand my data will be handled respectfully.
-    </label>
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://hufflet8.github.io/intake-form/thank-you.html">
-    <button type="submit">Submit</button>
-  </form>
-<p id="thankYouMessage" style="display:none; margin-top:20px; color:green;">
-  Thank you, I will get to your ticket as soon as I am able.<br>
-  Your comfort matters, and I appreciate your trust in Huffle’s IT Services.
-</p>
 
-<script>
-  function showThankYou() {
-    document.getElementById("thankYouMessage").style.display = "block";
-  }
-</script>
+  <h1>Huffle IT Services – Client Intake</h1>
+
+  <form action="https://formsubmit.co/huffleitsupport@gmail.com" method="POST">
+    <!-- Redirect to thank-you page -->
+    <input type="hidden" name="_next" value="https://huffleitsupport.github.io/thankyou.html">
+
+    <label for="name">Full Name</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="contact">Preferred Method of Contact</label>
+    <select name="contact" id="contact">
+      <option value="Email">Email</option>
+      <option value="Phone">Phone</option>
+      <option value="Text">Text</option>
+    </select>
+
+    <label for="pronouns">Pronouns</label>
+    <input type="text" name="pronouns" id="pronouns">
+
+    <label for="os">Operating System</label>
+    <select name="os" id="os">
+      <option value="Windows">Windows</option>
+      <option value="Mac">Mac</option>
+      <option value="Linux">Linux</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="device">Device Type</label>
+    <input type="text" name="device" id="device">
+
+    <label for="preferredOS">Preferred Operating System</label>
+    <input type="text" name="preferredOS" id="preferredOS">
+
+    <label for="phone">Preferred Phone</label>
+    <input type="text" name="phone" id="phone">
+
+    <label for="notes">Additional Notes</label>
+    <textarea name="notes" id="notes" rows="4"></textarea>
+
+    <label for="privacy">Privacy Preferences</label>
+    <textarea name="privacy" id="privacy" rows="3"></textarea>
+
+  <div style="border: 1px solid #ccc; background-color: #f9f3ee; padding: 15px; border-radius: 6px; margin-top: 20px;">
+  <label style="display: flex; align-items: flex-start; gap: 10px;">
+    <input type="checkbox" name="consent" required style="margin-top: 4px;">
+    <span>
+      I consent to Huffle’s IT Services reviewing this information to provide support.<br>
+      <small style="display: block; margin-top: 8px; color: #5a4a42;">
+        <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.
+      </small>
+    </span>
+  </label>
+</div>
+
+<button type="submit">Submit</button>
+  </form>
 </body>
 </html>
-
