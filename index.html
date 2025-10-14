@@ -115,7 +115,8 @@
     <!-- Form Column -->
     <div class="form-box">
       <form action="https://formsubmit.co/hufflesitservices@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="https://hufflesitservices.github.io/thank-you.html">
+        <!-- Optional redirect after submission -->
+        <input type="hidden" name="_next" value="https://hufflesitservices.github.io/thank-you.html">
 
         <label for="name">Full Name</label>
         <input type="text" name="name" required>
@@ -146,7 +147,7 @@
         <input type="text" name="device">
 
         <label for="phone">Preferred Phone</label>
-        <input type="text" name="phone">
+        <input type="tel" name="phone" id="phone" maxlength="14" placeholder="(XXX)-XXX-XXXX" required>
 
         <label for="notes">Additional Notes</label>
         <textarea name="notes" rows="4"></textarea>
@@ -167,6 +168,25 @@
       </form>
     </div>
   </div>
+
+  <!-- Phone number auto-formatting script -->
+  <script>
+    document.getElementById('phone').addEventListener('input', function (e) {
+      let x = e.target.value.replace(/\D/g, '').substring(0, 10);
+      let formatted = '';
+
+      if (x.length > 0) {
+        formatted += '(' + x.substring(0, 3) + ')';
+      }
+      if (x.length >= 4) {
+        formatted += '-' + x.substring(3, 6);
+      }
+      if (x.length >= 7) {
+        formatted += '-' + x.substring(6, 10);
+      }
+
+      e.target.value = formatted;
+    });
+  </script>
 </body>
 </html>
-
