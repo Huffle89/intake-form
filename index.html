@@ -6,10 +6,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fdf6f0;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #3b2f2f;
       padding: 20px;
-      max-width: 700px;
+      max-with: 700px;
       margin: auto;
     }
     h1 {
@@ -92,18 +96,17 @@
     <textarea name="privacy" id="privacy" rows="3"></textarea>
 
   <div style="border: 1px solid #ccc; background-color: #f9f3ee; padding: 15px; border-radius: 6px; margin-top: 20px;">
-  <label style="display: flex; align-items: flex-start; gap: 10px;">
-    <input type="checkbox" name="consent" required style="margin-top: 4px;">
-    <span>
-      I consent to Huffle’s IT Services reviewing this information to provide support.<br>
-      <small style="display: block; margin-top: 8px; color: #5a4a42;">
-        <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.
-      </small>
-    </span>
+  <label style="display: block;">
+    <input type="checkbox" name="consent" required style="margin-bottom: 10px;">
+    I consent to Huffle’s IT Services reviewing this information to provide support.
   </label>
+  <small style="display: block; margin-top: 8px; color: #5a4a42;">
+    <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.
+  </small>
 </div>
 
 <button type="submit">Submit</button>
   </form>
 </body>
 </html>
+
