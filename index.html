@@ -34,30 +34,6 @@
       box-sizing: border-box;
     }
 
-    .consent-block {
-      border: 1px solid #ccc;
-      background-color: #f9f3ee;
-      padding: 15px;
-      border-radius: 6px;
-      margin-top: 20px;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #5a4a42;
-    }
-
-    .consent-line {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      text-align: center;
-    }
-
-    .disclaimer-text {
-      margin-top: 10px;
-      padding-left: 28px;
-    }
-
     .form-wrapper {
       display: flex;
       align-items: flex-start;
@@ -75,6 +51,32 @@
     .form-box {
       flex-grow: 1;
       min-width: 300px;
+    }
+
+    .consent-block {
+      border: 1px solid #ccc;
+      background-color: #f9f3ee;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #5a4a42;
+      text-align: center;
+    }
+
+    .checkbox-center {
+      margin-bottom: 10px;
+    }
+
+    .consent-text {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .disclaimer-text {
+      text-align: left;
+      padding-left: 10px;
     }
 
     button {
@@ -137,10 +139,12 @@
         <textarea name="notes" rows="4"></textarea>
 
         <div class="consent-block">
-          <label class="consent-line">
+          <div class="checkbox-center">
             <input type="checkbox" name="consent" required>
+          </div>
+          <div class="consent-text">
             I consent to Huffle’s IT Services reviewing this information to provide support.
-          </label>
+          </div>
           <div class="disclaimer-text">
             <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.
           </div>
