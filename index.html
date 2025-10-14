@@ -47,7 +47,35 @@
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       border: 1px solid #ccc;
     }
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+    
+.consent-block {
+  border: 1px solid #ccc;
+  background-color: #f9f3ee;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5a4a42;
+}
 
+.disclaimer-text {
+  margin-top: 10px;
+  padding-left: 28px;
+}
+
+.form-box {
+  flex-grow: 1;
+  min-width: 300px;
+}
     .form-box {
       flex-grow: 1;
       min-width: 300px;
@@ -86,12 +114,10 @@
   <h1>Huffle IT Services – Client Intake</h1>
 
   <div class="form-wrapper">
-    <!-- Logo Column -->
     <div class="logo-box">
       <img src="Logo.png" alt="Huffle Logo">
     </div>
 
-    <!-- Form Column -->
     <div class="form-box">
       <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
         <label for="name">Full Name</label>
@@ -140,5 +166,6 @@
   </div>
 </body>
 </html>
+
 
 
