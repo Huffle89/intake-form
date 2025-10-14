@@ -33,7 +33,7 @@
 </head>
 <body>
   <h2>🛠️ Huffle’s IT Services – Client Intake</h2>
-  <form action="https://formsubmit.co/hufflesitservices@gmail.com" method="POST">
+  <form action="https://formsubmit.co/hufflesitservices@gmail.com" method="POST" onsubmit="showThankYou()>
     <input type="text" name="Name" placeholder="Full Name" required>
     <input type="text" name="Pronouns" placeholder="Preferred Pronouns">
     <input type="text" name="Contact" placeholder="Email or Phone" required>
@@ -49,6 +49,16 @@
     <input type="hidden" name="_next" value="https://hufflet8.github.io/intake-form/thank-you.html">
     <button type="submit">Submit</button>
   </form>
-</body>
+<p id="thankYouMessage" style="display:none; margin-top:20px; color:green;">
+  Thank you, I will get to your ticket as soon as I am able.<br>
+  Your comfort matters, and I appreciate your trust in Huffle’s IT Services.
+</p>
 
+<script>
+  function showThankYou() {
+    document.getElementById("thankYouMessage").style.display = "block";
+  }
+</script>
+</body>
 </html>
+
